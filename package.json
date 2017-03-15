@@ -1,0 +1,11 @@
+{
+  "name": "php-content",
+  "version": "1.0.0",
+  "description": "Collection of functions for content manipulation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bartosz Lorek",
+  "license": "MIT"
+}
