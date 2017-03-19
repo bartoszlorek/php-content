@@ -22,12 +22,13 @@ add_class( string $content, string $class )
 remove_class( string $content, string $class )
 ```
 
-## split-tag.php
-**Important!** pass tag as `<tag>` or `[tag]`. Returns an `array` of strings, each of which is a first-level sibling of tag. Nested tags (next levels) are returned their inside parents.
+## slice-tag.php
+**Important!** pass `$tag` as a `tagName` between opening and closing sign, eg.`<tag>` or `[tag]`. Returns an `array` of strings, each of which is a sibling of tag in certain level specified by `$depth`. Deeper tags are returned inside their parents.
 
 ```php
-split_tag( string $tag, string $content )
+slice_tag( string $tag, string $content [, int $depth=0] )
 ```
+[demo](http://bartoszlorek.pl/run/php-content/slice-tag.php)
 
 ## heading-hierarchy.php
 ```php
