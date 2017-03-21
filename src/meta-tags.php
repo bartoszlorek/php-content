@@ -20,7 +20,6 @@ array(
     ),
     "og:site_name" => "",
     "og:video" => "",
-
     ...
 );
 */
@@ -29,11 +28,11 @@ function meta_tags( $data=array() ) {
     if (! is_array( $data) || empty($data)) {
         return "";
     }
-    $echo = function ($property, $content) use (&$echo) {
+    $echo = function ( $property, $content ) use (&$echo) {
         if (is_array($content)) {
-            foreach ($content as $key => $value ) {
+            foreach ($content as $key => $value) {
                 $key = !is_int($key) ? ":$key" : "";
-                $echo($property.$key, $value);
+                $echo( $property.$key, $value );
             }
         } else {
             $attr = strpos($property, ":") !== false ? "property" : "name";
@@ -41,6 +40,7 @@ function meta_tags( $data=array() ) {
         }
     };
     foreach ($data as $property => $content) {
+        if (is_int($property)) continue;
         $echo($property, $content);
     }
 }

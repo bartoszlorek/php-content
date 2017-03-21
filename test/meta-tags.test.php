@@ -10,7 +10,7 @@ meta_tags(array(
         "pl_PL",
         "alternate" => array(
             "en_EN",
-            "fr_FR"
+            "fr_FR2"
         )
     )
 ));
