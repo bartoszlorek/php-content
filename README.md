@@ -26,7 +26,7 @@ remove_class( string $content, string $class )
 **Important!** pass `$tag` as a `tagName` between opening and closing sign, eg.`<tag>` or `[tag]`. Returns an `array` of strings, each of which is a sibling of tag in certain level specified by `$depth`. Deeper tags are returned inside their parents.
 
 ```php
-slice_tag( string $tag, string $content [, int $depth=0] )
+slice_tag( string $tag, string $content [, int $depth = 0] )
 ```
 [demo](http://bartoszlorek.pl/run/php-content/slice-tag.php)
 
